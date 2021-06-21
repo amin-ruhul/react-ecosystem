@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const NewTodo = () => {
   const [inputValue, setInputValue] = useState("");
   return (
-    <div>
+    <div className="new-todo">
       <input
         type="text"
         placeholder="Enter your todo"
