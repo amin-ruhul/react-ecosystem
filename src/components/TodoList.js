@@ -4,7 +4,7 @@ import TodoListItem from "./TodoListItem";
 import NewTodo from "./NewTodo";
 import { removeTodo } from "../actions";
 
-const TodoList = ({ todos = [{ text: "Hello" }], onRemovePressed }) => (
+const TodoList = ({ todos = [], onRemovePressed }) => (
   <div>
     <NewTodo />
     {todos.map((todo) => (
@@ -13,7 +13,7 @@ const TodoList = ({ todos = [{ text: "Hello" }], onRemovePressed }) => (
   </div>
 );
 
-const mapStateToProps = (text) => ({
+const mapStateToProps = (state) => ({
   todos: state.todos,
 });
 

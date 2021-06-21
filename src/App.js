@@ -5,7 +5,6 @@ import TodoList from "./components/TodoList";
 
 const App = () => (
   <div className="app">
-    Hello
     <TodoList />
   </div>
 );
