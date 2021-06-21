@@ -23,11 +23,12 @@
   margin-top: 50px;
   padding: 20px 15px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.623);
+  border-radius: 5px;
 }
 
 .new-todo input {
   border: none;
-  border-bottom: 2px solid green;
+  border-bottom: 2px solid rgba(0, 128, 43, 0.692);
   outline: none;
   width: 70%;
   font-size: 16px;
@@ -45,7 +46,8 @@
 .todo-item {
   margin-top: 15px;
   padding: 5px;
-  box-shadow: 2px 2px 5px green;
+  box-shadow: 2px 2px 5px rgba(0, 128, 0, 0.808);
+  border-radius: 5px;
 }
 
 .btn {
