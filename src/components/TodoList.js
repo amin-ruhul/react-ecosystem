@@ -5,19 +5,14 @@ import NewTodo from "./NewTodo";
 import { displayAlert } from "../thunks";
 import { removeTodo, completeTodo } from "../actions";
 
-const TodoList = ({
-  todos = [],
-  onRemovePressed,
-  onCompletePress,
-  onDisplayAlertClicked,
-}) => (
+const TodoList = ({ todos = [], onRemovePressed, onCompletePress }) => (
   <div>
     <NewTodo />
     {todos.map((todo) => (
       <TodoListItem
         todo={todo}
         onRemovePressed={onRemovePressed}
-        onCompletePress={onDisplayAlertClicked}
+        onCompletePress={onCompletePress}
       />
     ))}
   </div>
@@ -30,7 +25,6 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   onRemovePressed: (text) => dispatch(removeTodo(text)),
   onCompletePress: (text) => dispatch(completeTodo(text)),
-  onDisplayAlertClicked: () => dispatch(displayAlert),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodoList);
